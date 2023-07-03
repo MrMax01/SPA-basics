@@ -1,0 +1,36 @@
+/**** DEFAULTS ****/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 20px; /* 1rem will equal this now */
+  line-height: 1.6;
+  font-family: sans-serif; /* add google fonts */
+}
+
+body {
+  position: sticky;
+  height: 100vh;
+  width: 100vw;
+}
+div {
+  display: none;
+}
+.active {
+  display: block;
+}
+
+#home {
+  background-color: cadetblue;
+  height: 100%;
+}
+#contact {
+  background-color: rgb(157, 120, 34);
+  height: 100%;
+}
+#about-me {
+  background-color: rgb(42, 130, 20);
+  height: 100%;
+}
