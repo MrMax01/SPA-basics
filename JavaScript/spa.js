@@ -6,7 +6,7 @@ const app = {
     app.pages.forEach((pg) => {
       pg.addEventListener("show", app.pageShown);
     });
-    document.querySelectorAll("nav-link").forEach((link) => {
+    document.querySelectorAll(".nav-link").forEach((link) => {
       link.addEventListener("click", app.navigation);
     });
     history.replaceState({}, "Home", "#home");
@@ -15,13 +15,29 @@ const app = {
   navigation: (event) => {
     event.preventDefault();
     let currentPage = event.target.getAttribute("data-target");
+
     document.querySelector(".active").classList.remove("active");
     document.getElementById(currentPage).classList.add("active");
+
     history.pushState({}, currentPage, `#${currentPage}`);
+    document.getElementById(currentPage).dispatchEvent(app.show);
   },
-  pageShown: (event) => {},
+  pageShown: (event) => {
+    console.log("page");
+    let h1 = event.target.querySelector("h1");
+    h1.classList.add("big");
+    setTimeout(() => {
+      h1.classList.remove("big");
+    }, 500);
+  },
   poppin: (event) => {
     console.log(location.hash, "popstate event");
+    let hash = location.hash.replace("#", "");
+    document.querySelector(".active").classList.remove("active");
+    document.getElementById(hash).classList.add("active");
+
+    // history.pushState({}, currentPage, `#${currentPage}`);
+    document.getElementById(hash).dispatchEvent(app.show);
   },
 };
 
