@@ -22,6 +22,7 @@ const app = {
     history.pushState({}, currentPage, `#${currentPage}`);
     document.getElementById(currentPage).dispatchEvent(app.show);
   },
+  // ANIMAZIONI
   pageShown: (event) => {
     console.log("page");
     let h1 = event.target.querySelector("h1");
