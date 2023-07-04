@@ -2,36 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Single Page Application</title>
+    <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>SPA-Basics</title>
+    <!--  -->
   </head>
   <body>
-    <div id="home" class="active">
-      <h1>Home</h1>
-      <ol>
-        <li><a href="home">Home</a></li>
-        <li><a href="contact">Contact</a></li>
-        <li><a href="about-me">About me</a></li>
-      </ol>
-    </div>
-    <div id="contact">
-      <h1>Contact me</h1>
-      <ol>
-        <li><a href="home">Home</a></li>
-        <li><a href="contact">Contact</a></li>
-        <li><a href="about-me">About me</a></li>
-      </ol>
-    </div>
-    <div id="about-me">
-      <h1>About me</h1>
-      <ol>
-        <li><a href="home">Home</a></li>
-        <li><a href="contact">Contact</a></li>
-        <li><a href="about-me">About me</a></li>
-      </ol>
-    </div>
+    <main>
+      <div class="page active" id="home">
+        <h1>Home</h1>
+        <ol>
+          <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
+          <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
+          <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
+        </ol>
+      </div>
 
+      <div class="page" id="list">
+        <h1>List</h1>
+        <ol>
+          <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
+          <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
+          <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
+        </ol>
+      </div>
+
+      <div class="page" id="detail">
+        <h1>Detail</h1>
+        <ol>
+          <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
+          <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
+          <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
+        </ol>
+      </div>
+    </main>
     <script src="JavaScript/spa.js"></script>
   </body>
 </html>

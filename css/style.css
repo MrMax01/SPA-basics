@@ -10,27 +10,32 @@ html {
   font-family: sans-serif; /* add google fonts */
 }
 
-body {
-  position: sticky;
-  height: 100vh;
-  width: 100vw;
-}
-div {
+/**** PAGES ****/
+.page {
   display: none;
+  width: 100%;
+  min-height: 100%; /* allow for content off the bottom of the page */
+  position: fixed; /* or absolute if the user needs to scroll for more content */
+  padding: 1rem 2rem;
 }
 .active {
   display: block;
 }
-
 #home {
-  background-color: cadetblue;
-  height: 100%;
+  background-color: hsl(60, 50%, 80%);
 }
-#contact {
-  background-color: rgb(157, 120, 34);
-  height: 100%;
+#list {
+  background-color: hsl(180, 50%, 80%);
 }
-#about-me {
-  background-color: rgb(42, 130, 20);
-  height: 100%;
+#detail {
+  background-color: hsl(240, 50%, 80%);
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+.big {
+  font-size: 5rem;
+  font-weight: 900;
 }
