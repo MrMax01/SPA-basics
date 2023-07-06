@@ -64,7 +64,6 @@ const app = {
     document.querySelector(".active").classList.remove("active");
     document.getElementById(hash).classList.add("active");
 
-    document.getElementById(hash).dispatchEvent(app.show);
   },
 };
 
